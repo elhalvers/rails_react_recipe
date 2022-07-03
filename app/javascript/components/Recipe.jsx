@@ -10,11 +10,14 @@ class Recipe extends React.Component {
   }
 
   componentDidMount() {
-    const {
-      match: {
-        params: { id },
-      },
-    } = this.props;
+    // const {
+    //   match: {
+    //     params: { id },
+    //   },
+    // } = this.props;
+    const baseUrl = window.location.pathname;
+    const params = baseUrl.split('/');
+    const id = params.at(-1);
 
     const url = `/api/v1/show/${id} `;
     // const url = `/api/v1/show/7`;
