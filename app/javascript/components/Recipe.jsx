@@ -20,7 +20,7 @@ class Recipe extends React.Component {
     const id = params.at(-1);
 
     const url = `/api/v1/show/${id} `;
-    // const url = `/api/v1/show/7`;
+
     fetch(url)
       .then(response => {
         if (response.ok) {
